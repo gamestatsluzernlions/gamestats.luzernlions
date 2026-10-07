@@ -84,6 +84,7 @@ export const CtaScene: React.FC<CtaProps> = ({
             fontSize: 54,
             fontWeight: 600,
             lineHeight: 1.4,
+            whiteSpace: "pre-line",
             opacity: interpolate(frame, [0.8 * fps, 1.2 * fps], [0, 1], {
               extrapolateLeft: "clamp",
               extrapolateRight: "clamp",
@@ -96,7 +97,7 @@ export const CtaScene: React.FC<CtaProps> = ({
           }}
         >
           <div>{trainingWhen}</div>
-          <div>{trainingWhere}</div>
+          <div style={{ fontWeight: 800, marginTop: 12 }}>{trainingWhere}</div>
         </Interactive.Div>
 
         <Interactive.Div
@@ -113,7 +114,8 @@ export const CtaScene: React.FC<CtaProps> = ({
             }),
           }}
         >
-          Ab 19 · Keine Erfahrung nötig
+          Ab 19 Jahren<br />
+          Keine Erfahrung nötig
         </Interactive.Div>
 
         <Interactive.Div

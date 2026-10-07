@@ -23,11 +23,11 @@ npm run dev        # Remotion Studio öffnen (Vorschau & Bearbeitung)
 
 ## Trainingszeit, Ort und Kontakt anpassen
 
-Diese drei Angaben sind noch Platzhalter. Entweder im Studio rechts im Props-Editor der Komposition `RecruitingVideo` ändern, oder direkt in `src/Root.tsx` bei `defaultProps`:
+Aktuell: Montag & Mittwoch, 20:00 – 22:00 Uhr, Allmend Luzern. Kontakt: `@luzernlions`. Ändern entweder im Studio rechts im Props-Editor der Komposition `RecruitingVideo` ändern, oder direkt in `src/Root.tsx` bei `defaultProps`:
 
 ```tsx
-trainingWhen: "Training: [Wochentage & Zeit]",
-trainingWhere: "[Trainingsort], Luzern",
+trainingWhen: "Montag & Mittwoch\n20:00 – 22:00 Uhr", // \n = Zeilenumbruch
+trainingWhere: "Allmend Luzern",
 contact: "@luzernlions",
 ```
 

@@ -70,8 +70,8 @@ export const RemotionRoot: React.FC = () => {
           fps={30}
           durationInFrames={150}
           defaultProps={{
-            trainingWhen: "Training: [Wochentage & Zeit]",
-            trainingWhere: "[Trainingsort], Luzern",
+            trainingWhen: "Montag & Mittwoch\n20:00 – 22:00 Uhr",
+            trainingWhere: "Allmend Luzern",
             contact: "@luzernlions",
           }}
         />
@@ -85,8 +85,8 @@ export const RemotionRoot: React.FC = () => {
         fps={30}
         durationInFrames={785}
         defaultProps={{
-          trainingWhen: "Training: [Wochentage & Zeit]",
-          trainingWhere: "[Trainingsort], Luzern",
+          trainingWhen: "Montag & Mittwoch\n20:00 – 22:00 Uhr",
+          trainingWhere: "Allmend Luzern",
           contact: "@luzernlions",
         }}
       />
