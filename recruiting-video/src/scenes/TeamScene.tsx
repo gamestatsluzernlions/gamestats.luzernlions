@@ -2,8 +2,10 @@ import React from "react";
 import {
   AbsoluteFill,
   Easing,
+  Img,
   Interactive,
   interpolate,
+  staticFile,
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
@@ -21,6 +23,24 @@ export const TeamScene: React.FC = () => {
           alignItems: "center",
         }}
       >
+        <Img
+          name="Lion logo"
+          src={staticFile("logo/lion-white.png")}
+          style={{
+            width: 520,
+            marginBottom: 50,
+            opacity: interpolate(frame, [0, 0.3 * fps], [0, 1], {
+              extrapolateLeft: "clamp",
+              extrapolateRight: "clamp",
+            }),
+            scale: interpolate(frame, [0, 0.7 * fps], [0.4, 1], {
+              extrapolateLeft: "clamp",
+              extrapolateRight: "clamp",
+              easing: Easing.spring({ damping: 14 }),
+              output: "perceptual-scale",
+            }),
+          }}
+        />
         <Interactive.Div
           name="Sport label"
           style={{
@@ -28,7 +48,7 @@ export const TeamScene: React.FC = () => {
             fontWeight: 800,
             letterSpacing: 12,
             textTransform: "uppercase",
-            color: "#F5B700",
+            color: "#8FB8FF",
             marginBottom: 30,
             opacity: interpolate(frame, [0, 0.5 * fps], [0, 1], {
               extrapolateLeft: "clamp",
@@ -47,7 +67,7 @@ export const TeamScene: React.FC = () => {
           name="Team name Luzern"
           className="headline"
           style={{
-            fontSize: 250,
+            fontSize: 220,
             color: "white",
             opacity: interpolate(frame, [0.2 * fps, 0.6 * fps], [0, 1], {
               extrapolateLeft: "clamp",
@@ -66,8 +86,8 @@ export const TeamScene: React.FC = () => {
           name="Team name Lions"
           className="headline"
           style={{
-            fontSize: 300,
-            color: "#F5B700",
+            fontSize: 260,
+            color: "#8FB8FF",
             opacity: interpolate(frame, [0.4 * fps, 0.8 * fps], [0, 1], {
               extrapolateLeft: "clamp",
               extrapolateRight: "clamp",

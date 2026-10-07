@@ -1,6 +1,6 @@
 # Luzern Lions – Rekrutierungsvideo
 
-Werbevideo (ca. 24 Sekunden, Hochformat 1080×1920 für Instagram Reels, TikTok und WhatsApp-Status), mit dem die Luzern Lions neue Spieler ab 19 Jahren suchen. Gebaut mit [Remotion](https://www.remotion.dev) (Videos mit React).
+Werbevideo (ca. 26 Sekunden, Hochformat 1080×1920 für Instagram Reels, TikTok und WhatsApp-Status), mit dem die Luzern Lions neue Spieler ab 19 Jahren suchen. Gebaut mit [Remotion](https://www.remotion.dev) (Videos mit React).
 
 ## Ablauf
 
@@ -39,8 +39,20 @@ Alle anderen Texte stehen direkt in den Szenen unter `src/scenes/`.
 npx remotion render RecruitingVideo out/luzern-lions-recruiting.mp4
 ```
 
+## Design & Ton
+
+- Farben: Blau (`#05367A`, aus dem Logo) und Weiss, Hervorhebungen in Hellblau (`#8FB8FF`).
+- Logo: `public/logo/lion-white.png` und `lion-blue.png` (freigestellt und hochskaliert aus dem Vereinslogo).
+- Voiceover: `public/audio/voiceover.mp3`, generiert mit ElevenLabs (Stimme „Turbo Tim – High-Energy Ad Voice“). Jeder Satz ist in `src/RecruitingVideo.tsx` auf seine Szene gelegt.
+- Soundeffekte: `public/audio/stadium-intro.mp3` und `stadium-hit.mp3`, ebenfalls ElevenLabs.
+
+Text des Voiceovers:
+
+> Bist du bereit? Die Luzern Lions suchen Verstärkung! Wir suchen neue Spieler – ab neunzehn Jahren. Keine Erfahrung? Kein Problem. Bei uns gibt es für jeden die richtige Position. Unsere Saison: fast zweitausendvierhundert Yards und achtundzwanzig Touchdowns. Dich erwarten Coaching, Athletik und ein Team, das zusammenhält. Komm ins Probetraining – und werde ein Lion!
+
+Wird ein neues Voiceover eingesetzt, müssen die Schnittpunkte (`trimBefore`/`trimAfter`) in `src/RecruitingVideo.tsx` angepasst werden.
+
 ## Ideen zum Ausbauen
 
-- Logo: Datei nach `public/` legen und in `TeamScene.tsx` einbinden.
 - Musik: Audiodatei nach `public/` legen und mit `<Audio>` aus `@remotion/media` in `RecruitingVideo.tsx` einfügen (nur lizenzfreie Musik verwenden).
 - Eigene Spielszenen: Videoclips nach `public/` legen und als Hintergrund in den Szenen verwenden.

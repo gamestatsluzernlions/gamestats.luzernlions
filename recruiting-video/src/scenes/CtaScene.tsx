@@ -2,8 +2,10 @@ import React from "react";
 import {
   AbsoluteFill,
   Easing,
+  Img,
   Interactive,
   interpolate,
+  staticFile,
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
@@ -37,6 +39,18 @@ export const CtaScene: React.FC<CtaProps> = ({
           paddingRight: 90,
         }}
       >
+        <Img
+          name="CTA logo"
+          src={staticFile("logo/lion-white.png")}
+          style={{
+            width: 260,
+            marginBottom: 50,
+            opacity: interpolate(frame, [0, 0.4 * fps], [0, 1], {
+              extrapolateLeft: "clamp",
+              extrapolateRight: "clamp",
+            }),
+          }}
+        />
         <Interactive.Div
           name="CTA title"
           className="headline"
@@ -56,17 +70,17 @@ export const CtaScene: React.FC<CtaProps> = ({
         >
           Komm ins
           <br />
-          <span style={{ color: "#F5B700" }}>Probetraining</span>
+          <span style={{ color: "#8FB8FF" }}>Probetraining</span>
         </Interactive.Div>
 
         <Interactive.Div
           name="CTA details"
           style={{
-            marginTop: 90,
+            marginTop: 70,
             padding: "50px 60px",
             borderRadius: 32,
-            border: "6px solid #F5B700",
-            backgroundColor: "rgba(245, 183, 0, 0.08)",
+            border: "6px solid #FFFFFF",
+            backgroundColor: "rgba(255, 255, 255, 0.08)",
             fontSize: 54,
             fontWeight: 600,
             lineHeight: 1.4,
@@ -108,7 +122,7 @@ export const CtaScene: React.FC<CtaProps> = ({
           style={{
             marginTop: 70,
             fontSize: 96,
-            color: "#F5B700",
+            color: "#8FB8FF",
             opacity: interpolate(frame, [2 * fps, 2.4 * fps], [0, 1], {
               extrapolateLeft: "clamp",
               extrapolateRight: "clamp",

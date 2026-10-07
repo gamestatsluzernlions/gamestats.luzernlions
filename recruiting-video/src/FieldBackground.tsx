@@ -13,7 +13,7 @@ export const FieldBackground: React.FC<{ children: React.ReactNode }> = ({
     <AbsoluteFill
       style={{
         background:
-          "radial-gradient(ellipse at 50% 35%, #1f1f1f 0%, #0b0b0b 60%, #000000 100%)",
+          "radial-gradient(ellipse at 50% 35%, #0D4BA0 0%, #05367A 50%, #021A40 100%)",
         fontFamily: bodyFont,
         color: "white",
         overflow: "hidden",

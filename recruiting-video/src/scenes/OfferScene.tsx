@@ -18,8 +18,8 @@ const Check: React.FC = () => (
       width: 84,
       height: 84,
       borderRadius: 42,
-      backgroundColor: "#F5B700",
-      color: "#0b0b0b",
+      backgroundColor: "#FFFFFF",
+      color: "#05367A",
       fontSize: 52,
       fontWeight: 800,
       marginRight: 36,
@@ -57,7 +57,7 @@ export const OfferScene: React.FC = () => {
         >
           Was dich
           <br />
-          <span style={{ color: "#F5B700" }}>erwartet</span>
+          <span style={{ color: "#8FB8FF" }}>erwartet</span>
         </Interactive.Div>
 
         <Interactive.Div

@@ -19,7 +19,7 @@ export const RemotionRoot: React.FC = () => {
           width={1080}
           height={1920}
           fps={30}
-          durationInFrames={75}
+          durationInFrames={66}
         />
         <Composition
           id="Team"
@@ -27,7 +27,7 @@ export const RemotionRoot: React.FC = () => {
           width={1080}
           height={1920}
           fps={30}
-          durationInFrames={90}
+          durationInFrames={84}
         />
         <Composition
           id="Age"
@@ -35,7 +35,7 @@ export const RemotionRoot: React.FC = () => {
           width={1080}
           height={1920}
           fps={30}
-          durationInFrames={105}
+          durationInFrames={100}
         />
         <Composition
           id="Positions"
@@ -43,7 +43,7 @@ export const RemotionRoot: React.FC = () => {
           width={1080}
           height={1920}
           fps={30}
-          durationInFrames={135}
+          durationInFrames={160}
         />
         <Composition
           id="Stats"
@@ -51,7 +51,7 @@ export const RemotionRoot: React.FC = () => {
           width={1080}
           height={1920}
           fps={30}
-          durationInFrames={120}
+          durationInFrames={165}
         />
         <Composition
           id="Offer"
@@ -59,7 +59,7 @@ export const RemotionRoot: React.FC = () => {
           width={1080}
           height={1920}
           fps={30}
-          durationInFrames={120}
+          durationInFrames={132}
         />
         <Composition
           id="CTA"
@@ -83,7 +83,7 @@ export const RemotionRoot: React.FC = () => {
         width={1080}
         height={1920}
         fps={30}
-        durationInFrames={723}
+        durationInFrames={785}
         defaultProps={{
           trainingWhen: "Training: [Wochentage & Zeit]",
           trainingWhere: "[Trainingsort], Luzern",

@@ -2,8 +2,10 @@ import React from "react";
 import {
   AbsoluteFill,
   Easing,
+  Img,
   Interactive,
   interpolate,
+  staticFile,
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
@@ -15,6 +17,26 @@ export const HookScene: React.FC = () => {
 
   return (
     <FieldBackground>
+      <AbsoluteFill
+        style={{
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Img
+          name="Lion watermark"
+          src={staticFile("logo/lion-white.png")}
+          style={{
+            width: 1400,
+            opacity: 0.07,
+            scale: interpolate(frame, [0, 2.5 * fps], [1.15, 1], {
+              extrapolateLeft: "clamp",
+              extrapolateRight: "clamp",
+              output: "perceptual-scale",
+            }),
+          }}
+        />
+      </AbsoluteFill>
       <AbsoluteFill
         style={{
           justifyContent: "center",
@@ -47,7 +69,7 @@ export const HookScene: React.FC = () => {
           className="headline"
           style={{
             fontSize: 260,
-            color: "#F5B700",
+            color: "#8FB8FF",
             scale: interpolate(frame, [0.5 * fps, 0.9 * fps], [2.5, 1], {
               extrapolateLeft: "clamp",
               extrapolateRight: "clamp",
@@ -68,7 +90,7 @@ export const HookScene: React.FC = () => {
             marginTop: 40,
             height: 16,
             width: 560,
-            backgroundColor: "#F5B700",
+            backgroundColor: "#FFFFFF",
             scale: interpolate(frame, [1.1 * fps, 1.6 * fps], ["0 1", "1 1"], {
               extrapolateLeft: "clamp",
               extrapolateRight: "clamp",

@@ -49,7 +49,7 @@ export const StatsScene: React.FC = () => {
             fontWeight: 800,
             letterSpacing: 8,
             textTransform: "uppercase",
-            color: "#F5B700",
+            color: "#8FB8FF",
             marginBottom: 90,
             opacity: interpolate(frame, [0, 0.4 * fps], [0, 1], {
               extrapolateLeft: "clamp",
@@ -101,7 +101,7 @@ export const StatsScene: React.FC = () => {
             }),
           }}
         >
-          <div className="headline" style={{ fontSize: 240, color: "#F5B700" }}>
+          <div className="headline" style={{ fontSize: 240, color: "#8FB8FF" }}>
             {countUp(TOUCHDOWNS, 1.5)}
           </div>
           <div style={{ fontSize: 52, fontWeight: 600 }}>Touchdowns</div>
